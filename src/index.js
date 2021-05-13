@@ -6,6 +6,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import { put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
+import createSagaMiddleware from 'redux-saga';
 
 function* getSearch(){
     try{
@@ -24,11 +25,14 @@ const search = (state = {}, action) => {
     return state;
 }
 
-sagaMiddleware.run(rootSaga)
+const sagaMiddleware = createSagaMiddleware();
+
+
 
 function* rootSaga(){
     yield takeEvery('GET_SEARCH', search)
 }
+
 
 const storeInstance = createStore(
     combineReducers({
@@ -36,7 +40,7 @@ const storeInstance = createStore(
     }),
     applyMiddleware(logger, sagaMiddleware),
 )
-
+sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
     document.getElementById('root'));
