@@ -1,5 +1,6 @@
 import results from './SampleQuery';
 import GiphyFrame from '../GiphyFrame/GiphyFrame'
+import './SearchResults.css'
 
 function SearchResults() {
   return(

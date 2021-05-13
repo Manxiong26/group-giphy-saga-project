@@ -1,0 +1,7 @@
+.search{
+    font-size: 30px;
+    -webkit-text-fill-color: rgb(122, 157, 209);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+}
