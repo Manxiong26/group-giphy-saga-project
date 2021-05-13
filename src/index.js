@@ -17,7 +17,7 @@ function* getSearch(){
 }
 
 
-const getSearch = (state = {}, action) => {
+const search = (state = {}, action) => {
     if(action.type === 'SET_SEARCH') {
         return action.payload;
     }
@@ -27,12 +27,12 @@ const getSearch = (state = {}, action) => {
 sagaMiddleware.run(rootSaga)
 
 function* rootSaga(){
-    yield takeEvery('GET_SEARCH', getSearch)
+    yield takeEvery('GET_SEARCH', search)
 }
 
 const storeInstance = createStore(
     combineReducers({
-        rootSaga,
+        getSearch,
     }),
     applyMiddleware(logger, sagaMiddleware),
 )
