@@ -11,7 +11,7 @@ function App(props) {
       <header>
       <h1>Giphy Search!</h1>
       <Router>
-        <div class="nav">
+        <div className="nav">
           <ul>
             <li><Link to="/">Search</Link></li>
             <li><Link to="/favorites">Favorites</Link></li>
