@@ -1,6 +1,8 @@
+import './SearchResults.css'
+
 function SearchResults() {
   return(
-    <h1>SEARCH RESULTS!!!!!!!!!!!!!!!!</h1>
+    <h2 className="search">SEARCH RESULTS!!!!!!!!!!!!!!!!</h2>
   )
 }
 

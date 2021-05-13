@@ -1,0 +1,22 @@
+.link{
+    font: bold 25px san-sariff;
+    text-decoration: none;
+    background-color: #2e2beb;
+    color: #8d99b8;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 5px solid #636262;
+    border-bottom: 5px solid #7c7c7c;
+    border-left: 1px solid #CCCCCC;
+    margin-left: 1rem;
+    border-radius: 15px;
+    
+}
+
+li{
+    display: inline-block;
+}
+
+div{
+    text-align: center;
+}

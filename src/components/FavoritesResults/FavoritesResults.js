@@ -1,6 +1,8 @@
+import './FavoritesResults.css'
+
 function FavoritesResults() {
   return(
-    <h1>FAVORITES RESULTS!!!!!!!!!!!!!!!!</h1>
+    <h2 className="fav">FAVORITES RESULTS!!!!!!!!!!!!!!!!</h2>
   )
 }
 
