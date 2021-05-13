@@ -1,0 +1,14 @@
+h1{
+    text-shadow: 7px 7px 10px;
+}
+
+header {
+    font-size: 25px;
+    text-align: center;
+}
+
+header{
+    -webkit-text-fill-color: rgb(122, 157, 209);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
