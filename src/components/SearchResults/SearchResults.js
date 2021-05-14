@@ -1,7 +1,7 @@
 import results from './SampleQuery';
 import GiphyFrame from '../GiphyFrame/GiphyFrame';
 import './SearchResults.css';
-import SearchForm from '../searchForm/SearchForm';
+import SearchForm from '../SearchForm/SearchForm';
 import { useSelector } from 'react-redux';
 
 function SearchResults() {
