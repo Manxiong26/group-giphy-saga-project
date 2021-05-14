@@ -1,8 +1,18 @@
+import results from './SampleQuery';
+import GiphyFrame from '../GiphyFrame/GiphyFrame'
 import './SearchResults.css'
+import searchForm from '../searchForm/searchForm'
 
 function SearchResults() {
   return(
-    <h2 className="search">SEARCH RESULTS!!!!!!!!!!!!!!!!</h2>
+    <>
+      <searchForm />
+      {results.data.map( (giphy, i) => 
+        <div key={i}>
+          <GiphyFrame giphy={giphy}/>
+        </div>
+      )}
+    </>
   )
 }
 
