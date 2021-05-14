@@ -13,17 +13,20 @@ console.log('GIPHY key', GIPHY_KEY);
 
 
 /** ---------- EXPRESS ---------- **/
-router.get('/', (req, res) => {
-    axios.get(`{http://api.giphy.com/v1/gifs/search?api_key=${GIPHY_KEY}&q=${req.body.queryString}`)
+router.post('/', (req, res) => {
+    const queryString = req.body.searchString;
+    console.log(queryString);
+    
+    axios.get(`http://api.giphy.com/v1/gifs/search?api_key=${GIPHY_KEY}&q=${queryString}`)
     .then(response => {
        console.log(('Data from GIPHY:', response.data));
-       res.send(response.data)
+       res.send(response.data.data);
     }).catch(error => {
-        console.log('Error getting trending form giphy', error)
-        res.sendStatus(500)
-    })
+        console.log('Error getting trending form giphy', error);
+        res.sendStatus(500);
+    });
        
-    })
+    });
 
     module.exports = router;
 
