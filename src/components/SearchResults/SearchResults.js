@@ -1,17 +1,27 @@
 import results from './SampleQuery';
-import GiphyFrame from '../GiphyFrame/GiphyFrame'
-import './SearchResults.css'
-import searchForm from '../searchForm/searchForm'
+import GiphyFrame from '../GiphyFrame/GiphyFrame';
+import './SearchResults.css';
+import SearchForm from '../SearchForm/SearchForm';
+import { useSelector } from 'react-redux';
 
 function SearchResults() {
+
+  const searchResults = useSelector(store => store.rootReducer.search);
+
+  console.log(searchResults);
+  
+
+
   return(
     <>
-      <searchForm />
-      {results.data.map( (giphy, i) => 
+      <SearchForm />
+      {searchResults ? (searchResults.map( (giphy, i) => 
         <div key={i}>
           <GiphyFrame giphy={giphy}/>
         </div>
-      )}
+      ) ) : (
+        'pp'
+      ) }
     </>
   )
 }
